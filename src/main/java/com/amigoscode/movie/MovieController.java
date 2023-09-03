@@ -19,6 +19,11 @@ public class MovieController {
         return movieService.getMovies();
     }
 
+    @GetMapping("/highestId")
+    public int highestId() {
+        return movieService.highestMovie();
+    }
+
     @GetMapping("{id}")
     public Movie getMovieId(@PathVariable("id") Integer id) {
         return movieService.getMovie(id);

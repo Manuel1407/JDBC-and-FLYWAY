@@ -13,7 +13,7 @@ public class DatasourceConfig {
 
     @Bean
     @Primary
-    @ConfigurationProperties("app.datasource.main")
+    @ConfigurationProperties(prefix = "app.datasource.main")
     public HikariDataSource hikariDataSource() {
         return DataSourceBuilder
                 .create()
