@@ -7,6 +7,7 @@ public interface MovieDao {
     List<Movie> selectMovies();
     int insertMovie(Movie movie);
     int deleteMovie(int id);
+    int highestId();
     Optional<Movie> selectMovieById(int id);
     // TODO: Update
 }

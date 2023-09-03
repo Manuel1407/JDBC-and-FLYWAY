@@ -19,6 +19,10 @@ public class MovieService {
         return movieDao.selectMovies();
     }
 
+    public int highestMovie() {
+        return movieDao.highestId();
+    }
+
     public void addNewMovie(Movie movie) {
         // TODO: check if movie exists
         int result = movieDao.insertMovie(movie);
